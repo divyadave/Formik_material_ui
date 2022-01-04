@@ -51,7 +51,7 @@ function Create() {
             }
 
            axios.post("/notes", request).then(() => {
-               history('/')
+               history('/notes')
 
            })
          

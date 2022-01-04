@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout';
 import Create from './Pages/Create';
+import DonationForm from './Pages/DonationForm';
 import Notes from './Pages/Notes';
+import RegisterForm from './Pages/RegisterForm';
+import RegularForm from './Pages/RegularForm';
 
 const theme = createTheme({
   palette: {
@@ -12,7 +15,7 @@ const theme = createTheme({
     },
     secondary: {
       main: '#9c27bO'
-    } 
+    }
   },
   typography: {
     fontFamily: 'QuickSand',
@@ -30,39 +33,29 @@ function App() {
   return (
   
   <div className="App">
-
+   
       <BrowserRouter>
       <ThemeProvider theme={theme}>
-      <Layout>
+         
+      {/*  <RegularForm></RegularForm> */}
+      <DonationForm></DonationForm>
+        
+     {/*  <Layout>
       <Routes>
-       
-       
         
         <Route path="/create" element={<Create></Create>}></Route>
-        <Route path="/" element={<Notes></Notes>}></Route>
+        <Route path="/notes" exact element={<Notes></Notes>}></Route>
+        
         
         
        
 
         
       </Routes>
-      </Layout>
+      </Layout> */}
       </ThemeProvider>
       </BrowserRouter>
-    {/*   <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+   
     </div>
   );
 }

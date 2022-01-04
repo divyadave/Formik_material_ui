@@ -55,7 +55,7 @@ function Layout({ children }) {
   const menuItems = [
     {
       icon: <SubjectOutlined></SubjectOutlined>,
-      path: '/',
+      path: '/notes',
       text: 'My Notes'
       
     },
